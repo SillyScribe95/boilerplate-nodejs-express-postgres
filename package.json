@@ -1,23 +1,27 @@
 {
-    "name": "boilerplate-nodejs-express-postgres",
-    "description": "example of nodejs/express/postgres project",
-    "version": "1.1.0",
-    "author": "Erik Mangor",
-    "dependencies": {
-        "body-parser": "^1.19.0",
-        "express": "^4.17.1",
-        "pg": "^8.3.0",
-        "winston": "3.3.3"
-    },
-    "engines": {
-        "node": "10.15.2"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/emangor/boilerplate-nodejs-express-postgres.git"
-    },
-    "license": "MIT",
-    "scripts": {
-        "start": "node app.js"
-    }
+  "name": "boilerplate-nodejs-express-postgres",
+  "description": "example of nodejs/express/postgres project",
+  "version": "1.1.0",
+  "author": "Erik Mangor",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "pg": "^8.3.0",
+    "winston": "3.3.3",
+    "wpapi": "^1.2.1",
+    "ytdl-core": "^4.7.0"
+  },
+  "engines": {
+    "node": "14.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emangor/boilerplate-nodejs-express-postgres.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js"
+  }
 }
