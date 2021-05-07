@@ -4,7 +4,7 @@ const { default: axios } = require("axios");
 var WPAPI = require("wpapi");
 
 module.exports.healthcheck = async ({ query, ...req }, res) => {
-  console.log("___ loggo query ___", query);
+  console.log("___ logga query ___", query);
 
   let fdkreds = query.name;
   let dsfe =
@@ -21,7 +21,7 @@ module.exports.healthcheck = async ({ query, ...req }, res) => {
   //   axios.get(dsfe);
 
   function ajdwe(adsfre) {
-    console.log("___ loggo adsfre ___", adsfre);
+    console.log("___ logga adsfre ___", adsfre);
 
     return {
       id: adsfre.id,
@@ -30,7 +30,7 @@ module.exports.healthcheck = async ({ query, ...req }, res) => {
 
   const okwqe = xobkdf.map(ajdwe);
 
-  console.log("___ loggo xobkdf ___", xobkdf.data);
+  console.log("___ logga xobkdf ___", xobkdf.data);
 
   let oksad =
     //

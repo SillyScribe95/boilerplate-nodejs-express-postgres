@@ -15,31 +15,34 @@ module.exports.GetMediaInfo = async ({ query, ...sawe }, res) => {
 
   const linkvar = ijae;
   const asde = await ytdl.getBasicInfo(linkvar);
-  const ksdf = asde?.player_response?.videoDetails;
+  const ksdf =
+    //
+    "";
+  // asde?.player_response?.videoDetails;
   const aodake = query.list;
 
   const kdsew = {
     youtube: ksdf.videoId,
-    name: ksdf?.title,
+    name: ksdf.title,
     duration: parseFloat(ksdf.lengthSeconds),
   };
 
-  //   console.info("___ loggo req, res ___", ksdf);
-  console.log("___ loggo aodake ___", aodake);
-  console.log("___ loggo asde ___", kdsew);
+  //   console.info("___ logga req, res ___", ksdf);
+  console.log("___ logga aodake ___", aodake);
+  console.log("___ logga asde ___", kdsew);
   //   const dsfaewr = await ytdl.getBasicInfo(
   //     "https://www.youtube.com/watch?v=A5YiqaQbsyI"
   //   );
-  //   console.log("___ loggo asde ___", dsfaewr);
+  //   console.log("___ logga asde ___", dsfaewr);
 
   // const sokase = await wp.posts().get();
 
-  // console.log("___ loggo sokase ___", sokase);
+  // console.log("___ logga sokase ___", sokase);
 
   // wp.posts()
   //   .get()
   //   .then((posts) => {
-  //     console.log("___ loggo MAIN posts ___", posts);
+  //     console.log("___ logga MAIN posts ___", posts);
   //   });
 
   //   var yt = require("youtube.get-video-info");

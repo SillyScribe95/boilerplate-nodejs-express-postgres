@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const { default: axios } = require("axios");
 
 module.exports.healthcheck = async ({ query, ...req }, res) => {
-  console.log("___ loggo query ___", query);
+  console.log("___ logga query ___", query);
 
   const jkfdsr =
     //
@@ -11,7 +11,7 @@ module.exports.healthcheck = async ({ query, ...req }, res) => {
   //   https://swapi.dev/api/people/1/"
   let xobkdf = await axios.get(jkfdsr);
 
-  console.log("___ loggo xobkdf ___", xobkdf.data);
+  console.log("___ logga xobkdf ___", xobkdf.data);
 
   let oksad =
     //
