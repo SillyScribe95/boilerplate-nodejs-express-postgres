@@ -35,6 +35,7 @@ module.exports.getMediaObj = async ({ query, ...sawe }, res) => {
   const oksde = {
     link: linkios,
     name: nmaeos,
+    ...query,
   };
 
   const okasdf =
