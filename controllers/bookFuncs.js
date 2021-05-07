@@ -25,7 +25,7 @@ module.exports.getBookInfo = async (nameo, sadwoqke) => {
 
   const okase = succBook(iaseawe.data.items);
 
-  console.log("getBookInfo", okase);
+  // // logs.logga("getBookInfo", okase);
 
   return okase;
 };
@@ -53,14 +53,33 @@ function parseBookResult({
 
   const ijsadw = pick(dsdf, oasdase);
 
+  // logs.logga("industryIdentifiers-zz", industryIdentifiers);
+
   const okdsewq = {
     ...ijsadw,
     mediaType: "book",
     googleID: id,
-    thumbnail: imageLinks["thumbnail"],
-    // isbn13: industryIdentifiers[0]["identifier"],
-    // isbn10: industryIdentifiers[1]["identifier"],
+    thumbnail: imageLinks && imageLinks["thumbnail"],
   };
+
+  function aseow({ type, identifier }) {
+    let oasd = "";
+    switch (type) {
+      case "OTHER":
+        oasd = "catalogueID";
+        break;
+      default:
+        oasd = type;
+    }
+
+    okdsewq[oasd] = identifier;
+
+    return oasd;
+  }
+
+  const okas = industryIdentifiers && industryIdentifiers.map(aseow);
+
+  // logs.logga("okas-zz", okas);
 
   return okdsewq;
 }
@@ -77,10 +96,10 @@ function cleanBaseApi({ imageLinks, searchInfo, volumeInfo, ...dsdf }) {
   const okdsewq = {
     ...volumeInfo,
     ...ijsadw,
-    subtitleTwo: searchInfo.textSnippet,
+    subtitleTwo: searchInfo && searchInfo.textSnippet,
   };
 
-  // console.log("cleanBaseApi.-zz", okdsewq);
+  // // logs.logga("cleanBaseApi.-zz", okdsewq);
 
   return okdsewq;
 }

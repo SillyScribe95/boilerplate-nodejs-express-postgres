@@ -32,6 +32,8 @@ if (cluster.isMaster) {
 
   app.use(bodyParser.json());
   app.use(router); // tell the app this is the router we are using
+  console.log("___ mediaController ___", mediaController);
+
   //healthcheck routes
   // router.get("/", mediaController.getMediaObj);
   router.get("/fetch", mediaController.getMediaObj);

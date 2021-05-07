@@ -1,5 +1,5 @@
 const { parseBookResult, getBookInfo } = require("./bookFuncs");
-const { logga } = require("./logFuncs");
+const logs = require("./logFuncs");
 const { getExtString } = require("./stringFuncs");
 
 async function getMediaInfo({ link, name }) {
@@ -7,16 +7,16 @@ async function getMediaInfo({ link, name }) {
 
   const osdker = getExtString(link);
 
-  logga("getExtString", osdker);
+  // logs.logga("getExtString", osdker);
 
   switch (osdker) {
     case "pdf":
-      logga("FOUND_PDF", osdker);
+      // logs.logga("FOUND_PDF", osdker);
       extInfo = await getBookInfo(name);
       break;
-    default:
-      logga("FOUND_DEFAULT", osdker);
-    //   extInfo = getVidInfo(link);
+    //   default:
+    //     // logs.logga("FOUND_DEFAULT", osdker);
+    //     extInfo = getVidInfo(link);
   }
 
   return extInfo;
@@ -38,15 +38,13 @@ module.exports.getMediaObj = async ({ query, ...sawe }, res) => {
     ...query,
   };
 
-  const okasdf =
+  console.log("___ oksde ___", oksde);
+
+  let okasdf =
     //
-    // await "";.
-    // await getBookInfo(nmaeos);
     await getMediaInfo(oksde);
 
-  //   console.log("BASE", okasdf);
-
-  //   res.status(200).json({ status: "ok", message: result, statusCode: 200 });
+  // okasdf = okasdf ? okasdf :
 
   res.json(okasdf);
 };

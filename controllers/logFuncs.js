@@ -37,10 +37,15 @@ const options = {
 // const Logger = require("@ptkdev/logger");
 // const logger = new Logger(options);
 
-module.exports.logga = (...wer) => {
+function logga(...wer) {
   // console.log(...wer);
-};
+}
 
-module.exports.loggo = (...wer) => {
+function loggo(...wer) {
   console.log(...wer);
+}
+
+module.exports.logs = {
+  loggo,
+  logga,
 };
