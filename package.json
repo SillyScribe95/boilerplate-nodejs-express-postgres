@@ -25,6 +25,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "nodemon app.js"
+    "run": "nodemon app.js",
+    "start": "node app.js"
   }
 }
